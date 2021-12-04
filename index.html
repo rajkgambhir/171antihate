@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Team NPR Final Project (DRAFT)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+</head>
+<body>
+<div class="presentation-content">
+
+    <div class="introTextBlock" id="introTextDiv" style="height: 100vh; border: thin solid grey; border-radius: 5px; background: white; padding: 1vh;">
+            <div id="introText" style="transform: translate(0, 50vh);">
+            </div>
+    </div>
+
+    <div>
+        <div class="c-glitch" style="background-image: url('images/doctors.jpeg'); height:100vh; width:100%; display:flex; justify-content:center; align-items:end;">
+            <div>
+                <h3 style="background-color: white; transform: translateY(-5vh);" class="genText">While hate crimes have long been an issue in America,</h3>
+                <h2 style="background-color: white; transform: translateY(-5vh);" class="genText">the problem has gotten <mark>worse</mark> in recent years</h2>
+                <h6 style="background-color: white; transform: translateY(-5vh); text-align: center;" class="genText">Click the next dot to continue</h6>
+
+            </div>
+            <div class="c-glitch__img" style="background-image: url('images/doctors.jpeg');"></div>
+            <div class="c-glitch__img" style="background-image: url('images/doctors.jpeg');"></div>
+            <div class="c-glitch__img" style="background-image: url('images/doctors.jpeg');"></div>
+            <div class="c-glitch__img" style="background-image: url('images/doctors.jpeg');"></div>
+            <div class="c-glitch__img" style="background-image: url('images/doctors.jpeg');"></div>
+        </div>
+    </div>
+
+    <div class="barChartDiv container-fluid" style="height: 100vh; border: thin solid grey; border-radius: 5px; padding: 1vh;">
+        <div class="row">
+            <div class="col-10">
+                <div id="bar-area" style="height: 75vh; width:100%;">
+                </div>
+            </div>
+            <div class="col-2 captionText medText" id="bar-area-caption">
+            </div>
+        </div>
+    </div>
+
+    <div class="mapChartBlock" style="height: 100vh; border: thin solid grey; border-radius: 5px; padding: 1vh;">
+        <div id="modalImageBlock" class="modal" style="display: none;">
+            <span id="modalClose">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="modalCaption"></div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <div id="mapDiv" style="height: 75vh; width:100%; ">
+                </div>
+            </div>
+            <div class="col-2 captionText medText" id="map-area-caption"></div>
+        </div>
+    </div>
+
+
+    <div class="sankeyContainerBlock container-fluid" style="height: 100vh; border: thin solid grey; border-radius: 5px; padding: 1vh;">
+        <div class="row">
+            <div class="col-10">
+                <div id="sankeyDiv" style="height: 75vh; width:100%; margin-top: 10vh;opacity: 1">
+                </div>
+            </div>
+            <div class="col-2 captionText medText" id="sankey-area-caption">
+            </div>
+        </div>
+    </div>
+
+    <div class="lineChartBlock" style="height: 100vh; border: thin solid grey; border-radius: 5px; padding: 1vh;">
+        <div class="row">
+            <div class="col-10">
+                <!--                                        Added btn and btn-dark to make this styled like left button-->
+                <select id='categorySelector' class="btn btn-dark genText custom-select align-self-center" style="width: 100%" onchange="categoryChange()">
+                    <option value="race" selected>Race</option>
+                    <option value="religion">Religion</option>
+                    <option value="lgbtq">Gender and Sexuality (LGBTQ+)</option>
+                    <option value="disability">Disability</option>
+                </select>
+                <div id="selection-line-chart" style="height: 75vh; width:100%;">
+                </div>
+            </div>
+            <div class="col-2 captionText medText" id="line-area-caption"></div>
+        </div>
+    </div>
+
+    <div class="guessChartBlock" style="height: 100vh; border: thin solid grey; border-radius: 5px; background: white; padding: 1vh;">
+        <div class="row">
+            <div class="col-10" style="position: relative;">
+                <div id="guessDiv" style="height: 75vh; width: 100%">
+                    <canvas width=700px; height=500px; id="myCanvas" style="position:absolute; z-index: 2;"></canvas>
+                </div>
+                <button type="button" onclick="myGuessViz.revealGraph()">Toggle graph</button>
+                <button type="button" onclick="myGuessViz.clearArea()">Erase drawing</button>
+            </div>
+            <div class="col-2">
+                <div class="row" id="guess-area-caption"></div>
+                <div class="row">
+                    <p class="genText labelText" id="hidden-guess-caption" style="opacity: 0">
+                        In the aftermath of 9/11, hate crimes against Muslims in America rose by over <mark>1,700%</mark>
+                        and have never returned to pre-2001 levels. Other events, both domestic (terror attacks like the Pulse
+                        Shooting) and foreign (the rise of ISIS) seem to contribute to local increases.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="antiAsianHateBlock" style="height: 100vh; border: thin solid grey; border-radius: 5px; background: white; padding: 1vh;">
+        <div class="row">
+            <div class="col-10">
+                <div id="antiAsianDiv" style="height: 75vh; width:100%;">
+                </div>
+            </div>
+            <div class="col-2 captionText" id="anti-asian-area-caption"></div>
+        </div>
+    </div>
+
+    <div class="endBlock" style="height: 100vh; border: thin solid grey; border-radius: 5px; background: white; padding: 1vh;">
+        <div id="endDiv" style="height: 100%; width: 100%">
+            <h1 class="genText bigText" style="padding-top: 10px">If you want hate crimes to be <mark>history</mark></h1>
+            <h3 class="genText bigText">Consider donating to these organizations who work tirelessly to stem the tide of hate crimes</h3>
+            <div class="row">
+                <div class="col-4 bigText genText">
+                    <ul style="list-style-type:disc">
+                        <li>
+                            <h5 class="bigText genText" ><a href = "https://support.splcenter.org/site/Donation2?df_id=1684&mfc_pref=T&1684.donation=form1">Southern Poverty Law Center</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="bigText genText"><a href = "https://www.lawyerscommittee.org/make-a-donation/">Lawyer's Committee for Civil Rights</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="bigText genText"><a href="https://support.adl.org/give/174715/#!/donation/checkout">Anti-Defamation League</a></h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 bigText genText">
+                    <ul>
+                        <li>
+                            <h5 class="bigText genText"><a href="https://secure.actblue.com/donate/ms_blm_homepage_2019">Black Lives Matter</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="bigText genText"><a href="https://secure.donationpay.org/aajc/">Asian Americans Advancing Justice</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="bigText genText"><a href="https://www.unidosus.org/donate/">Unidos US</a></h5>
+                    </ul>
+                </div>
+                <div class="col-4 bigText genText">
+                    <ul>
+                        <li>
+                            <h5 class="bigText genText"><a href="https://saldef.org/">Sikh American Legal Defense & Education Fund</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="bigText genText"><a href="https://action.cair.com/a/general">Council on American-Islamic Relations</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="bigText genText"><a href="https://secure.narf.org/page/64457/donate/1">Native American Rights Fund</a></h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <h6 class="genText bigText">Thank you for viewing our project. Special gratitude to Kidist, Johanna, Professor Pfister, and the
+                rest of the CS 171 teaching staff for a great semester.</h6>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-array.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v2.min.js"></script>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<!-- Slick -->
+<script src="js/slick/slick.min.js"></script>
+<script type="text/javascript">
+    function getSliderSettings(){
+        return {
+            dots: true,
+            vertical: true,
+            draggable: false,
+            initialSlide: 3
+        }
+    }
+
+    $(document).ready(function(){
+        $('.presentation-content', this).slick({
+            dots: true,
+            vertical: true,
+            draggable: false,
+        });
+    });
+    $('.presentation-content', this).slick('setPosition');
+</script>
+
+<!-- embedding JS libraries -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+<!-- Google Chart Loader -->
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!-- OWN JS -->
+<script src="js/main.js"></script>
+<script src="js/mapVis.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/textViz.js"></script>
+<script src="js/mySlick.js"></script>
+<script src="js/sankey.js"></script>
+<script src="js/guessViz.js"></script>
+<script src="js/separateStackedBar.js"></script>
+<script src="js/selectionLineChart.js"></script>
+<script src="js/victimAreaChart.js"></script>
+
+</body>
+</html>
