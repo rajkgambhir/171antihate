@@ -77,11 +77,6 @@ function initMainPage(mapDataArray, data) {
 }
 
 
-window.addEventListener('resize', function () {
-    "use strict";
-    window.location.reload();
-});
-
 function change() {
     let doc = document.getElementById("endDiv");
     let color = ["rgba(234, 82, 234, 0.2)", "rgba(151, 157, 172, 0.2)", "rgba(244, 63, 63, 0.2)", "rgba(242, 148, 35, 0.2)", "rgba(210, 215, 19, 0.2)", "rgba(103, 204, 82, 0.2)", "rgba(104, 188, 197, 0.2)", "rgba(95, 133, 194, 0.2)", "rgba(119, 102, 222, 0.2)"];
