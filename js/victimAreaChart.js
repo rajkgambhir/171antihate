@@ -14,7 +14,6 @@ class victimAreaChart {
 
         this.initVis();
 
-
     }
 
 
