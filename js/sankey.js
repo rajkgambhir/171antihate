@@ -190,6 +190,14 @@ class sankey {
             // Sets chart options.
             var options = {
                 width: vis.width,
+                sankey: {
+                    node: {
+                        label: {
+                            fontName: "Book Antiqua",
+                            fontSize: 14
+                        }
+                    }
+                }
             };
 
             // Instantiates and draws our chart, passing in some options.

@@ -78,6 +78,14 @@ class separateStackedBar {
             .style("border-radius", "5px")
             .style("padding", "10px");
 
+        vis.svg.append("text")
+            .attr("class", "x label genText")
+            .attr("text-anchor", "end")
+            .attr("x", vis.width)
+            .attr("y", vis.height + 30)
+            .attr("font-size", "x-small")
+            .text("Date");
+
 
         // tooltip
         vis.tooltip = d3.select("body").append('div')
@@ -385,7 +393,7 @@ class separateStackedBar {
         d3.select("#anti-asian-area-caption").html("<p class='genText medText'>As we hope we've shown, one important means of stemming the tide " +
             "of hate crimes is pushing the narrative around politically volitile events <mark>away from racist, reactive, " +
             "and violent responses.</mark> As shown here, growing antagonism with China and COVID have had a noticable " +
-            "impact on hate crimes against Asian Americans over the past few years (feel free to hover to learn more).</p>")
+            "impact on hate crimes against Asian Americans over the past few years (hover to learn more).</p>")
     }
 
 }

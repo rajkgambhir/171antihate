@@ -55,6 +55,7 @@ class selectionLineChart {
         vis.yAxis = d3.axisLeft()
             .scale(vis.y);
 
+
         vis.xAxisGroup = vis.svg.append("g")
             .attr("class", "x-axis axis");
 
@@ -62,6 +63,13 @@ class selectionLineChart {
             .attr("class", "y-axis axis");
 
 
+        vis.svg.append("text")
+            .attr("class", "x label genText")
+            .attr("text-anchor", "end")
+            .attr("x", vis.width)
+            .attr("y", vis.height + 30)
+            .attr("font-size", "x-small")
+            .text("Date");
 
         // tooltip
         vis.tooltip = d3.select("body").append('div')
