@@ -9,6 +9,10 @@
     padding-right: 15px;
 }
 
+ul, li {
+    list-style-type: none;
+}
+
 .introTextBlock, .barChartDiv, .mapChartBlock, .sankeyContainerBlock, .lineChartBlock, .guessChartBlock, .antiAsianHateBlock, #endDiv {
     transition: all 2s;
 }

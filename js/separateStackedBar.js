@@ -16,7 +16,7 @@ class separateStackedBar {
         this.displayData = [];
 
         // bar chart colors
-        this.colors = ["red", "blue", "maroon", "black", "green", "coral","brown", "palevioletred", "darkmagenta"]
+        this.colors = ["#F43F3F", "#F29423", "#D2D713", "#67CC52", "#68BCC5", "#5F85C2", "#7766DE", "#EA52EA", "#979DAC", "black", "#9F8170", "#702963", "#006B3C", "#E9967A", "#9E1B32"];
 
 
         // format time
@@ -41,7 +41,7 @@ class separateStackedBar {
 
         // add title
         vis.svg.append('g')
-            .attr('class', 'title bar-title')
+            .attr('class', 'title bar-title genText')
             .append('text')
             .attr('transform', `translate(${vis.width / 2}, 0)`)
             .attr('text-anchor', 'middle')
@@ -67,10 +67,10 @@ class separateStackedBar {
             .scale(vis.y);
 
         vis.xAxisGroup = vis.svg.append("g")
-            .attr("class", "x-axis axis");
+            .attr("class", "x-axis axis genText");
 
         vis.yAxisGroup = vis.svg.append("g")
-            .attr("class", "y-axis axis")
+            .attr("class", "y-axis axis genText")
             // https://www.d3-graph-gallery.com/graph/barplot_stacked_hover.html
             .style("background-color", "white")
             .style("border", "solid")
@@ -86,7 +86,7 @@ class separateStackedBar {
 
         // Add title space
         vis.svg.append('g')
-            .attr('class', 'title')
+            .attr('class', 'title genText')
             .attr('id', 'ssb-title')
             .append('text')
             .attr('transform', `translate(${vis.width / 2}, -10)`)
@@ -263,7 +263,7 @@ class separateStackedBar {
         // Enter
         title.enter()
             .append("text")
-            .attr("class", "title")
+            .attr("class", "title genText")
             .attr('id', 'ssb-title')
             .merge(title)
             // .text([selectedCategory])
@@ -374,7 +374,7 @@ class separateStackedBar {
         vis.svg.select("text.axis-title").remove();
 
         vis.svg.append("text")
-            .attr("class", "axis-title")
+            .attr("class", "axis-title genText")
             .attr("x", -5)
             .attr("y", -15)
             .attr("dy", ".1em")

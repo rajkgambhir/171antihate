@@ -198,7 +198,7 @@ class sankey {
 
             d3.select("#sankey-area-caption").html("<p class='genText bigText'>Black people have long been victims of hate crimes " +
                 "in this country. This graph shows perpetrators of hate crimes on the left side, and corresponding victims " +
-                "of hate crimes on the right. Feel free to hover over to explore.</p>")
+                "of hate crimes on the right. Hover over to explore.</p>")
 
 
         }

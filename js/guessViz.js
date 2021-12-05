@@ -266,7 +266,7 @@ class guessViz {
 }
 
 function change() {
-    let doc = document.getElementsByClassName("guessChartBlock")[0];
+    let doc = document.getElementsByClassName("endBlock")[0];
     let color = ["rgba(95, 133, 194, 0.2)", "rgba(119, 102, 222, 0.2)", "rgba(234, 82, 234, 0.2)", "rgba(151, 157, 172, 0.2)", "rgba(244, 63, 63, 0.2)", "rgba(242, 148, 35, 0.2)", "rgba(210, 215, 19, 0.2)", "rgba(103, 204, 82, 0.2)", "rgba(104, 188, 197, 0.2)"];
     doc.style.backgroundColor = color[colorCounter];
     colorCounter = (colorCounter + 1) % color.length;
