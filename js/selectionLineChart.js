@@ -304,7 +304,7 @@ class selectionLineChart {
             .attr("class", "line") // Need to add this to make sure the graphs update
             .attr("fill", "none")
             .attr("id", function(d) {
-                return ((d.key).split(/(?<=^\S+)\s/)[0]) + "_line";
+                return ((d.key).split(/(\s+)/)[0]) + "_line";
             })
             .attr("stroke", function (d) {
                 return color(d.key);
@@ -355,7 +355,7 @@ class selectionLineChart {
                 if(d[0] == 2020){
                     circleCount++;
                 }
-                    return (vis.categoryDict[selectedCategory][localIndex]).split(/(?<=^\S+)\s/)[0];
+                    return (vis.categoryDict[selectedCategory][localIndex]).split(/(\s+)/)[0];
             })
             .attr("r", 4)
             .attr("cx", function(dd){return vis.x(dd[0])})
@@ -466,7 +466,7 @@ class selectionLineChart {
             .attr("text-anchor", "left")
             .style("alignment-baseline", "middle")
             .on("mouseover", function(event, d) {
-                let entrant = (d.key).split(/(?<=^\S+)\s/)[0];
+                let entrant = (d.key).split(/(\s+)/)[0];
 
                 d3.select(this)
                     .style("text-decoration", "underline overline");
