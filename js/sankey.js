@@ -187,15 +187,22 @@ class sankey {
             data.addColumn('number', 'Number of Hate Crimes');
             data.addRows(vis.flat);
 
+            let sankeyColors = ["#F29423", "#D2D713", "#67CC52", "#68BCC5", "#5F85C2", "#7766DE", "#EA52EA", "#979DAC", "black", "#9F8170", "#702963", "#006B3C", "#E9967A", "#9E1B32", "#F43F3F"];
+
             // Sets chart options.
             var options = {
                 width: vis.width,
                 sankey: {
                     node: {
+                        colors: sankeyColors,
                         label: {
                             fontName: "Book Antiqua",
-                            fontSize: 14
-                        }
+                            fontSize: 14,
+                        },
+                    },
+                    link: {
+                        colorMode: 'gradient',
+                        colors: sankeyColors
                     }
                 }
             };
