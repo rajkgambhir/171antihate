@@ -141,6 +141,12 @@ class guessViz {
             "guess, press 'Toggle graph' to see how the data pans out.</li></ol> </p>")
 
 
+        d3.select("#guess-area-caption").html("<h5 class=\"genText medText\"> " +
+            "To demonstrate the often reactive nature of hate crimes, <mark>guess how the number hate crimes against Muslims has changed based on the " +
+            "political and social events noted in the graph.</mark><p class='genText medText'><ol class='medText'><li> " +
+            "Draw directly on the graph by clicking and dragging.</li><br><li>For more context, hover over the yellow dots " +
+            "to learn more about domestic and international events that have a direct bearing on the number of hate crimes " +
+            "against Muslims.</li><br><li>Once you have made your guess, press 'Toggle graph' to see how the data pans out.</li></ol></p></h5>");
 
         this.wrangleData()
     }

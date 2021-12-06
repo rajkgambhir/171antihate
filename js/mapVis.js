@@ -250,10 +250,11 @@ class MapVis {
             .attr('transform', `translate(${vis.width * 2.8 / 5}, ${vis.height - 45})`)
             .call(vis.barAxis);
 
-        d3.select("#map-area-caption").html("<h3 class=\"genText bigText\">Areas which " +
-            "saw high reports of hate crime in the time studied include the West Coast and the North East. <p class='medText genText'>" +
-            "<mark>Click on any state to read a tweet about an alleged hate crime that occured there since 2020.</mark> Click the 'X' in " +
-            "the upper right-hand corner to return to the main presentation.</p></h3>")
+        d3.select("#map-area-caption").html("<h5 class=\"genText medText\">Areas which " +
+            "saw high reports of hate crime in the time studied include the <mark>West Coast and the North East.</mark> <p class='genText medText'>" +
+            "<ol class='medText'><li>Click on any state to read a tweet about an alleged hate crime that occured there since 2020.</li>" +
+            "<br><li>Click the 'X' in the upper right-hand corner to return to the main presentation.</li></p></h5>");
+
     }
 
 }

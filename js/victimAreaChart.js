@@ -273,10 +273,10 @@ class victimAreaChart {
 
         vis.svg.on('mousemove', mouseMove);
 
-        d3.select("#bar-area-caption").html("<h5 class='bigText genText' id='introText'>For those in the U.S., 2020 saw" +
-            " the <mark>highest level of hate crimes since 2008.</mark><p class='medText genText'>" +
-            "Following the inital COVID-19 lockdowns, we see a spike in hate crimes not seen since 9/11, this time directed primarily against Black " +
-            "and Asian Americans. <mark>Hover over the chart for more info.</mark></p></h5>");
+        d3.select("#bar-area-caption").html("<h5 class=\"genText medText\">For those in the U.S., 2020 saw" +
+            " the <mark>highest level of hate crimes since 2008.</mark> Following the inital COVID-19 lockdowns, we see " +
+            "a spike in hate crimes not seen since 9/11, this time directed primarily against Black and Asian Americans." +
+            "<p class='medText genText'><ol class='medText'><li>Hover over the chart for more info.</li></ol></h5>");
 
     }
 }

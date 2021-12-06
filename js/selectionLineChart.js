@@ -505,11 +505,8 @@ class selectionLineChart {
             "crimes perpetrated against <mark>Asian Americans, Hispanics and Latinos, and White Americans</mark> also contributed " +
             "to 2020's record highs. Sharp rises in the number of hate crimes against certain communities are often" +
             " due to politically charged events negatively associated with said communities.<p class='genText medText'>" +
-            "<ol class='medText'><li>Hover over each dot to get more info.</li><li>Hover over each entry in the key to just show the " +
-            "line in question.</li><li>Use the selector on top to change the type of discrimination being shown.</li></ol></p></h5>");
-
-
-
+            "<ol class='medText'><li>Hover over each dot to get more info.</li><br><li>Hover over each entry in the key to just show the " +
+            "line in question.</li><br><li>Use the selector on top to change the type of discrimination being shown.</li></ol></p></h5>");
 
 
     }

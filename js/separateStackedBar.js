@@ -307,7 +307,7 @@ class separateStackedBar {
         var subgroups = (vis.bias)
 
         // color palette = one color per subgroup of bias
-        var color = d3.scaleOrdinal()
+         vis.color = d3.scaleOrdinal()
             .domain(subgroups)
             .range(vis.colors)
 
@@ -321,7 +321,7 @@ class separateStackedBar {
             .attr("class", "column")
             .attr("fill", function(d) {
                 // console.log("fill", d.key)
-                return color(d.key);
+                return vis.color(d.key);
             })
             // .attr("opacity", 0.5)
             .attr("opacity",function(d){
@@ -368,8 +368,6 @@ class separateStackedBar {
                     .html(``);
             });
 
-
-
         // ---- DRAW AXIS ----
 
         vis.xAxisGroup = vis.svg.select(".x-axis")
@@ -390,11 +388,13 @@ class separateStackedBar {
             .text("Hate Crimes");
 
 
-        d3.select("#anti-asian-area-caption").html("<p class='genText medText'>As we hope we've shown, one important means of stemming the tide " +
+        d3.select("#anti-asian-area-caption").html("<h5 class=\"genText medText\">As we hope we've shown, one important means of stemming the tide  " +
             "of hate crimes is pushing the narrative around politically volitile events <mark>away from racist, reactive, " +
             "and violent responses.</mark> As shown here, growing antagonism with China and COVID have had a noticable " +
-            "impact on hate crimes against Asian Americans over the past few years (hover to learn more).</p>")
+            "impact on hate crimes against Asian Americans over the past few years<p class='genText medText'><ol class='medText'><li> " +
+            "Hover over the graph to learn more.</li></ol></p></h5>");
     }
+
 
 }
 

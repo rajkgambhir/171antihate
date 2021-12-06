@@ -211,10 +211,11 @@ class sankey {
             var chart = new google.visualization.Sankey(document.getElementById("sankeyDiv"));
             chart.draw(data, options);
 
-            d3.select("#sankey-area-caption").html("<p class='genText bigText'>Black people have long been victims of hate crimes " +
-                "in this country. This graph shows perpetrators of hate crimes on the left side, and corresponding victims " +
-                "of hate crimes on the right. Hover over to explore.</p>")
 
+            d3.select("#sankey-area-caption").html("<h5 class=\"genText medText\">Black people have long been victims of hate crimes in this country, " +
+                "along with people of the Jewish faith and other minority groups. <p class='genText medText'>" +
+                "<ol class='medText'><li>This graph shows perpetrators of hate crimes on the left side, and corresponding victims " +
+                "of hate crimes on the right.</li><br><li>Hover over the visualization to get specific data.</li></p></h5>");
 
         }
     }
