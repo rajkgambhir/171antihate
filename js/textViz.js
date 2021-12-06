@@ -16,8 +16,8 @@ class TextViz {
 
     highlightText() {
         d3.select("#introText").html("<h1 class=\"bigText genText\" id=\"introText\"><mark>Waves of Hate" +
-            "</mark></h1><h3 class=\"genText labelText\">Raj Gambhir, Priyanka Thapa, Nikhil Dharmaraj</h3><h6 " +
-            "class=\"genText labelText\" style='font-style: italic'><mark>Use the orange dots below to advance. " +
+            "</mark></h1><h3 class=\"genText labelText\"></h3><h6 " +
+            "class=\"genText labelText\" style='font-style: italic'><br><mark>Use the orange dots below to advance. " +
             "Click on the second dot to continue.</mark></h6><h6 class=\"genText labelText\">" +
             "Content Warning: Graphic Images, Upsetting Themes</h6><h6 class=\"genText labelText\">Statistics from the Federal Bureau of Investigation</h6>")
 
