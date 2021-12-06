@@ -115,7 +115,6 @@ class selectionLineChart {
             "Anti-Catholic",
             "Anti-Multiple Religions, Group",
             "Anti-Atheism/Agnosticism",
-            "Anti-Gender Non-Conforming",
             "Anti-Jehovah's Witness",
             "Anti-Mormon",
             "Anti-Buddhist",
